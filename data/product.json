@@ -1,0 +1,145 @@
+{
+ "Смартфон Samsung Galaxy Z Fold 6 12gb/256gb": {
+    "brand":"Samsung",
+    "model":"Z Fold 6 12gb/256gb",
+    "OS": "Android",
+    "screen": {
+        "diagonal":7.6,
+        "type":"Dynamic AMOLED 2X",
+        "width": 1856,
+        "height": 2160,
+        "updateRate": 120
+    },
+    "RAM": 12,
+    "ROM":256,
+    "camera":50,
+    "battery":4400,
+    "images": [
+        "SamsungZFold6.png_w630_h480_resize.png",
+        "SAMSUNGZFOLD6.png_w630_h490_resize.png",
+        "FOLD.png_w630_h480_resize.png"
+    ],
+    "simSlots": 2
+    },
+    "Смартфон Xiaomi 14 12/512gb": {
+        "brand":"Xiaomi",
+        "model":"14 12/512gb",
+        "OS":"Android",
+        "screen": {
+            "diagonal":6.36,
+            "type":"AMOLED",
+            "width":1200,
+            "height":2670,
+            "updateRate":120
+        },
+        "RAM":12,
+        "ROM":512,
+        "camera":50,
+        "battery":4610,
+        "images": [
+            "Xiaomi_14.jpg",
+            "Xiaomi14_2.png",
+            "img_0_77_5819_0_1_yqRyKJ.jpg"
+        ],
+        "simSlots":2
+        },
+        "Смартфон Huawe Pura 70 ultra 16/512gb": {
+            "brand":"Huawei",
+            "model":"70 ultra 16/512gb",
+            "OS":"Android",
+            "screen": {
+                "diagonal":6.8,
+                "type":"LTPO OLED",
+                "width":1260,
+                "height":2844,
+                "updateRate":120
+            },
+            "RAM":16,
+            "ROM":512,
+            "camera":50,
+            "battery":5200,
+            "images": [
+                "pura 70.jpg",
+                "pura 70 2.jpg",
+                "pura 70 3.jpg"
+            ],
+            "simSlots":2
+        },
+        "Смартфон Iphone 16 Pro 8/256gb": {
+            "brand":"Apple",
+            "model":"16 Pro 8/256gb",
+            "OS":"IOS",
+            "screen": {
+                "diagonal":6.3,
+                "type":"OLED",
+                "width":1200,
+                "height":2640,
+                "updateRate":120
+            },
+            "RAM":8,
+            "ROM":256,
+            "camera":48,
+            "battery":3555,
+            "images": [
+                "ip 16pro.jpg",
+                "ip 16pro 2.jpg",
+                "ip 16pro 3.jpg"
+            ],
+            "simSlots":1
+        },
+        "Смартфон Xiaomi 15 Ultra 16/1024gb": {
+            "brand":"Xiaomi",
+            "model":"15 Ultra 16/1024gb",
+            "OS":"Android",
+            "screen": {
+                "diagonal":6.73,
+                "type":"AMOLED",
+                "width":1440,
+                "height":3200,
+                "updateRate":120
+            },
+            "RAM":16,
+            "ROM":1024,
+            "camera":200,
+            "battery":5410,
+            "images": [
+                "Xio 15ultra.jpg",
+                "xio 15ultra 2.jpg",
+                "Xio 15ultra 3.jpg"
+            ],
+            "simSlots":2
+        }
+
+ 
+}
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

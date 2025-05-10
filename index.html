@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html lang="ru">  
+    <head>
+        <meta charset="UTF-8">  
+        <title>Задание</title>
+        <meta name="description" content="Пример задания">
+        <!-- defer загрузит JS-файл только после загрузки body -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+        <link rel="icon" href="./favicon.png"> <!--32x32-->
+        <link rel="stylesheet" href="styles/style.css">
+        <script defer src="./js/main.js"></script>
+    </head>
+    <body> 
+        <header>
+            <img id="logo" src="./data/images/56056.png">
+            <div class="header-title">
+                <h1>Smile shop</h1>
+                <h3>Интернет магазин смартфонов</h3>
+            </div>
+            <a href="#" id="cart" title="корзина">
+                <img src="./data/images/sell.svg">
+                <span Id="cart-product-counter">0</span>
+            </a>
+            <div id="filter">   
+                <div>
+                    <input id="search" type="text">
+                    <img src="./data/images/search.256x256.svg" id="search-button" >
+                </div>
+            </div>
+
+            </header>
+            <main id="catalog">Здесь будут карточки товаров
+            </main>
+            <footer>
+            </footer>
+    </body>
+</html>
