@@ -87,7 +87,6 @@ footer {
     }
 }
 
-
 /* === Корзина === */
 #cart {
     display: flex;
@@ -300,37 +299,64 @@ body.dark-theme #theme-toggle {
     color: #ddd;
 }
 
+/* Поисковая форма */
 .search-form {
     display: flex;
-    flex: 1 1 300px;
     max-width: 500px;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: white;
+    margin: 0 auto;
+    gap: 8px;
 }
 
-.search-form input {
-    flex-grow: 1;
-    border: none;
-    padding: 10px 14px;
-    font-size: 16px;
-    outline: none;
-}
-
+/* Инпут и кнопка — выровнены по высоте */
+.search-form input[type="text"],
 .search-form button {
+    height: 40px;  /* фиксированная высота */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    padding: 0 12px;
+}
+
+/* Кнопка поиска */
+.search-form button {
+    width: 40px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #6c5ce7;
     border: none;
-    padding: 0 16px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+    background-color: #574b90;
 }
 
 .search-form button img {
     width: 20px;
     height: 20px;
-    filter: brightness(0) invert(1);
+}
+
+/* Адаптивно для мобилок */
+@media (max-width: 480px) {
+    .search-form {
+        max-width: 100%;
+        padding: 0 16px;
+        gap: 6px;
+    }
+
+    .search-form input[type="text"],
+    .search-form button {
+        height: 38px;  /* чуть меньше для узких экранов */
+        font-size: 14px;
+        border-radius: 6px;
+    }
+
+    .search-form button {
+        width: 38px;
+    }
 }
 
 .header-actions {
