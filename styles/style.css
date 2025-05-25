@@ -133,7 +133,13 @@ footer {
     border-radius: 14px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
+.phone-card .slider-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
 .phone-card .slider-wrapper img {
     position: absolute;
     width: 100%;
@@ -302,23 +308,27 @@ body.dark-theme #theme-toggle {
 /* Поисковая форма */
 .search-form {
     display: flex;
-    max-width: 500px;
-    margin: 0 auto;
-    gap: 8px;
+    align-items: center;
+    gap: 10px;;
 }
 
 /* Общие стили для input и button */
 .search-form input[type="text"],
 .search-form button {
     height: 40px; /* фиксированная высота */
-    border-radius: 8px;
     border: 1px solid #ccc;
-    font-size: 16px;
     line-height: 1;
-    padding: 0 12px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.search-form input[type="text"]:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* Инпут */
@@ -336,16 +346,27 @@ body.dark-theme #theme-toggle {
     cursor: pointer;
     justify-content: center;
 }
+#search-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.4);
+}
 
 /* Иконка внутри кнопки */
 .search-form button img {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
 }
 
 /* Ховеры */
 .search-form button:hover {
     background-color: #574b90;
+}
+@media (max-width: 600px) {
+  .search-form input[type="text"]:hover,
+  #search-button:hover {
+    transform: scale(1.02);
+  }
 }
 
 /* Адаптив для мобильных */
