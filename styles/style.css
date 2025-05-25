@@ -307,39 +307,48 @@ body.dark-theme #theme-toggle {
     gap: 8px;
 }
 
-/* Инпут и кнопка — выровнены по высоте */
+/* Общие стили для input и button */
 .search-form input[type="text"],
 .search-form button {
-    height: 40px;  /* фиксированная высота */
+    height: 40px; /* фиксированная высота */
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 16px;
+    line-height: 1;
     padding: 0 12px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
 }
 
-/* Кнопка поиска */
+/* Инпут */
+.search-form input[type="text"] {
+    flex-grow: 1;
+    padding-left: 12px;
+}
+
+/* Кнопка */
 .search-form button {
     width: 40px;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #6c5ce7;
     border: none;
+    background-color: #6c5ce7;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    justify-content: center;
 }
 
-.search-form button:hover {
-    background-color: #574b90;
-}
-
+/* Иконка внутри кнопки */
 .search-form button img {
     width: 20px;
     height: 20px;
 }
 
-/* Адаптивно для мобилок */
+/* Ховеры */
+.search-form button:hover {
+    background-color: #574b90;
+}
+
+/* Адаптив для мобильных */
 @media (max-width: 480px) {
     .search-form {
         max-width: 100%;
@@ -349,15 +358,18 @@ body.dark-theme #theme-toggle {
 
     .search-form input[type="text"],
     .search-form button {
-        height: 38px;  /* чуть меньше для узких экранов */
+        height: 38px;
         font-size: 14px;
         border-radius: 6px;
+        line-height: 1;
+        padding: 0 10px;
     }
 
     .search-form button {
         width: 38px;
     }
 }
+
 
 .header-actions {
     display: flex;
