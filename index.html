@@ -15,41 +15,39 @@
 </head>
 <body>
 
-    <!-- Шапка -->
-    <header class="site-header">
-        <div class="container header-inner">
-            
-            <!--Переключатель на темную тему-->
-            <button id="theme-toggle" title="Переключить тему">🌙</button>
-
-            <!-- Логотип -->
-            <a href="/" class="logo-link" title="На главную">
-                <img src="./data/images/56056.png" alt="Логотип Smile Shop" class="logo">
-            </a>
-
-            <!-- Название -->
-            <div class="site-title">
-                <h1>Smile Shop</h1>
-                <p class="subtitle">Интернет-магазин смартфонов</p>
+<header class="site-header">
+    <div class="container header-inner">
+        
+        <!-- Логотип и название -->
+        <a href="/" class="logo-brand">
+            <img src="./data/images/56056.png" alt="Smile Shop" class="logo">
+            <div class="brand-text">
+                <span class="brand-name">Smile Shop</span>
+                <span class="brand-subtitle">Смартфоны и аксессуары</span>
             </div>
+        </a>
 
-            <!-- Корзина -->
-            <a href="#" id="cart" title="Перейти в корзину">
-                <img src="./data/images/sell.svg" alt="Иконка корзины">
+        <!-- Поиск -->
+        <form class="search-form" role="search">
+            <input type="text" id="search" placeholder="Поиск..." aria-label="Поиск смартфона">
+            <button type="submit" id="search-button" aria-label="Найти">
+                <img src="./data/images/search.256x256.svg" alt="Поиск">
+            </button>
+        </form>
+
+        <!-- Темная тема и корзина -->
+        <div class="header-actions">
+            <button id="theme-toggle" title="Тема">🌙</button>
+            <a href="#" id="cart" title="Корзина">
+                <img src="./data/images/sell.svg" alt="Корзина">
                 <span id="cart-product-counter">0</span>
             </a>
         </div>
+    </div>
+</header>
 
-        <!-- Поисковая строка -->
-        <div class="container search-container">
-            <form class="search-form" role="search">
-                <label for="search" class="visually-hidden">Поиск товаров</label>
-                <input type="text" id="search" placeholder="Поиск смартфона..." aria-label="Поиск смартфона">
-                <button type="submit" id="search-button" aria-label="Найти">
-                    <img src="./data/images/search.256x256.svg" alt="Поиск">
-                </button>
-            </form>
-        </div>
+</header>
+
     </header>
 
     <!-- Каталог -->
