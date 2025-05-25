@@ -108,38 +108,138 @@
                 "Xio 15ultra 3.jpg"
             ],
             "simSlots":2
-        }
+        },
+        "Видеокарта Rtx 3060 12gb": {
+            "brand":"MSI",
+            "model":"3060 12gb",
+            "OS":"-",
+            "screen": {
+                "diagonal": 0,
+                "type":"-",
+                "width":0,
+                "height":0,
+                "updateRate":0
+            },
+            "RAM":12,
+            "ROM":0,
+            "camera":0,
+            "battery":0,
+            "images": [
+                "rtx 3060.webp",
+                "rtx 3060.1.webp",
+                "rtx 3060.2.webp"
+            ],
+            "simSlots":0
 
- 
+        },
+   "Видеокарта RTX 3070 Ti 8gb": {
+    "brand": "Gigabyte",
+    "model": "RTX 3070 Ti 8GB",
+    "OS": "-",
+    "screen": {
+      "diagonal": 0,
+      "type": "-",
+      "width": 0,
+      "height": 0,
+      "updateRate": 0
+    },
+    "RAM": 8,
+    "ROM": 0,
+    "camera": 0,
+    "battery": 0,
+    "images": [
+      "rtx3070ti-1.webp",
+      "rtx3070ti-2.jpg",
+      "rtx3070ti-3.jpg"
+    ],
+    "simSlots": 0
+  },
+  "Видеокарта RTX 3080 10gb": {
+    "brand": "ASUS",
+    "model": "RTX 3080 10GB",
+    "OS": "-",
+    "screen": {
+      "diagonal": 0,
+      "type": "-",
+      "width": 0,
+      "height": 0,
+      "updateRate": 0
+    },
+    "RAM": 10,
+    "ROM": 0,
+    "camera": 0,
+    "battery": 0,
+    "images": [
+      "rtx3080-1.webp",
+      "rtx3080-2.webp",
+      "rtx3080-3.webp"
+    ],
+    "simSlots": 0
+  },
+  "Видеокарта RTX 4070 Super 12gb": {
+    "brand": "ZOTAC",
+    "model": "RTX 4070 Super 12GB",
+    "OS": "-",
+    "screen": {
+      "diagonal": 0,
+      "type": "-",
+      "width": 0,
+      "height": 0,
+      "updateRate": 0
+    },
+    "RAM": 12,
+    "ROM": 0,
+    "camera": 0,
+    "battery": 0,
+    "images": [
+      "rtx4070super-1.webp",
+      "rtx4070super-2.jpg",
+      "rtx4070super-3.jpg"
+    ],
+    "simSlots": 0
+  },
+  "Видеокарта RTX 4080 16gb": {
+    "brand": "Palit",
+    "model": "RTX 4080 16GB",
+    "OS": "-",
+    "screen": {
+      "diagonal": 0,
+      "type": "-",
+      "width": 0,
+      "height": 0,
+      "updateRate": 0
+    },
+    "RAM": 16,
+    "ROM": 0,
+    "camera": 0,
+    "battery": 0,
+    "images": [
+      "rtx4080-1.webp",
+      "rtx4080-2.webp",
+      "rtx4080-3.webp"
+    ],
+    "simSlots": 0
+  },
+  "Видеокарта RTX 4090 24gb": {
+    "brand": "ASUS",
+    "model": "RTX 4090 24GB",
+    "OS": "-",
+    "screen": {
+      "diagonal": 0,
+      "type": "-",
+      "width": 0,
+      "height": 0,
+      "updateRate": 0
+    },
+    "RAM": 24,
+    "ROM": 0,
+    "camera": 0,
+    "battery": 0,
+    "images": [
+      "rtx4090-1.webp",
+      "rtx4090-2.jpg",
+      "rtx4090-3.webp"
+    ],
+    "simSlots": 0
+  }
 }
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -152,31 +152,56 @@ function showForwardImage(slider) {
 }
 function getDescriptionDiv(phoneData) {
     const desc = document.createElement('div');
-    desc.className = 'description';
+    desc.className = 'Opisanie'; // используй твой CSS класс Opisanie
+
+    const brand = document.createElement('p');
+    brand.innerText = 'Бренд: ' + phoneData.brand;
+    desc.appendChild(brand);
+
+    const model = document.createElement('p');
+    model.innerText = 'Модель: ' + phoneData.model;
+    desc.appendChild(model);
 
     const os = document.createElement('p');
-    os.innerText = 'OS: ' + phoneData.OS;
-    desc.appendChild(os);
+    if (phoneData.OS && phoneData.OS !== '-') {
+        os.innerText = 'ОС: ' + phoneData.OS;
+        desc.appendChild(os);
+    }
 
     const ram = document.createElement('p');
-    ram.innerText = 'RAM: ' + phoneData.RAM + ' GB';
+    ram.innerText = 'Оперативная память: ' + phoneData.RAM + ' ГБ';
     desc.appendChild(ram);
 
-    const rom = document.createElement('p');
-    rom.innerText = 'ROM: ' + phoneData.ROM + ' GB';
-    desc.appendChild(rom);
+    if (phoneData.ROM && phoneData.ROM > 0) {
+        const rom = document.createElement('p');
+        rom.innerText = 'Встроенная память: ' + phoneData.ROM + ' ГБ';
+        desc.appendChild(rom);
+    }
 
-    const camera = document.createElement('p');
-    camera.innerText = 'Camera: ' + phoneData.camera + ' MP';
-    desc.appendChild(camera);
+    if (phoneData.camera && phoneData.camera > 0) {
+        const camera = document.createElement('p');
+        camera.innerText = 'Камера: ' + phoneData.camera + ' МП';
+        desc.appendChild(camera);
+    }
 
-    const battery = document.createElement('p');
-    battery.innerText = 'Battery: ' + phoneData.battery + ' mAh';
-    desc.appendChild(battery);
+    if (phoneData.battery && phoneData.battery > 0) {
+        const battery = document.createElement('p');
+        battery.innerText = 'Батарея: ' + phoneData.battery + ' мАч';
+        desc.appendChild(battery);
+    }
 
-    const sim = document.createElement('p');
-    sim.innerText = 'SIM slots: ' + phoneData.simSlots;
-    desc.appendChild(sim);
+    if (phoneData.simSlots && phoneData.simSlots > 0) {
+        const sim = document.createElement('p');
+        sim.innerText = 'Слоты SIM: ' + phoneData.simSlots;
+        desc.appendChild(sim);
+    }
+
+    // Дополнительно, можно отобразить "Тип устройства"
+    if (phoneData.camera === 0 && phoneData.battery === 0 && phoneData.screen.diagonal === 0) {
+        const type = document.createElement('p');
+        type.innerText = 'Тип: Видеокарта';
+        desc.prepend(type);
+    }
 
     return desc;
 }

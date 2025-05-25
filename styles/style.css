@@ -46,13 +46,13 @@ footer {
 
 /* === Описание характеристик === */
 .Opisanie {
-    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    background: linear-gradient(135deg, #ff9966, #ff5e62); /* оранжево-розовый градиент */
     color: white;
     padding: 25px 30px;
     border-radius: 16px;
     max-width: 320px;
     margin-top: 25px;
-    box-shadow: 0 10px 30px rgba(108, 92, 231, 0.4);
+    box-shadow: 0 10px 30px rgba(255, 94, 98, 0.4); /* соответствующий тень */
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
@@ -60,7 +60,7 @@ footer {
 }
 
 .Opisanie:hover {
-    background: linear-gradient(135deg, #a29bfe, #6c5ce7);
+    background: linear-gradient(135deg, #ff5e62, #ff9966);
     transform: scale(1.03);
 }
 
