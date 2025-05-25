@@ -1,37 +1,70 @@
-<!DOCTYPE html> 
-<html lang="ru">  
-    <head>
-        <meta charset="UTF-8">  
-        <title>Задание</title>
-        <meta name="description" content="Пример задания">
-        <!-- defer загрузит JS-файл только после загрузки body -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
-        <link rel="icon" href="./favicon.png"> <!--32x32-->
-        <link rel="stylesheet" href="styles/style.css">
-        <script defer src="./js/main.js"></script>
-    </head>
-    <body> 
-        <header>
-            <img id="logo" src="./data/images/56056.png">
-            <div class="header-title">
-                <h1>Smile shop</h1>
-                <h3>Интернет магазин смартфонов</h3>
-            </div>
-            <a href="#" id="cart" title="корзина">
-                <img src="./data/images/sell.svg">
-                <span Id="cart-product-counter">0</span>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Smile Shop — Интернет-магазин смартфонов</title>
+    <meta name="description" content="Купить смартфон онлайн с быстрой доставкой и по выгодной цене — Smile Shop.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="./js/main.js"></script>
+
+    <!-- Google Fonts (опционально) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Шапка -->
+    <header class="site-header">
+        <div class="container header-inner">
+            
+            <!--Переключатель на темную тему-->
+            <button id="theme-toggle" title="Переключить тему">🌙</button>
+
+            <!-- Логотип -->
+            <a href="/" class="logo-link" title="На главную">
+                <img src="./data/images/56056.png" alt="Логотип Smile Shop" class="logo">
             </a>
-            <div id="filter">   
-                <div>
-                    <input id="search" type="text">
-                    <img src="./data/images/search.256x256.svg" id="search-button" >
-                </div>
+
+            <!-- Название -->
+            <div class="site-title">
+                <h1>Smile Shop</h1>
+                <p class="subtitle">Интернет-магазин смартфонов</p>
             </div>
 
-            </header>
-            <main id="catalog">Здесь будут карточки товаров
-            </main>
-            <footer>
-            </footer>
-    </body>
+            <!-- Корзина -->
+            <a href="#" id="cart" title="Перейти в корзину">
+                <img src="./data/images/sell.svg" alt="Иконка корзины">
+                <span id="cart-product-counter">0</span>
+            </a>
+        </div>
+
+        <!-- Поисковая строка -->
+        <div class="container search-container">
+            <form class="search-form" role="search">
+                <label for="search" class="visually-hidden">Поиск товаров</label>
+                <input type="text" id="search" placeholder="Поиск смартфона..." aria-label="Поиск смартфона">
+                <button type="submit" id="search-button" aria-label="Найти">
+                    <img src="./data/images/search.256x256.svg" alt="Поиск">
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Каталог -->
+    <main id="catalog" class="catalog">
+        <div class="container">
+            <p>Здесь будут карточки товаров</p>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Smile Shop. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
 </html>

@@ -1,90 +1,218 @@
-header {
-    background-color: rgb(247, 247, 247);
+/* === Общие настройки === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
-    background-color: rgb(247, 247, 247);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: #f4f4f8;
+    color: #333;
+    line-height: 1.6;
 }
+
+/* === Header & Footer === */
+header,
 footer {
-    background-color: rgb(247, 247, 247);
+    background-color: #ffffff;
+    padding: 20px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
 }
+
+footer {
+    font-size: 14px;
+    color: #888;
+}
+
+/* === Фото блока === */
 .FOTO {
-    width: 20%;
-    height: 20%;
-    background-color: #2E073F;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    background: linear-gradient(135deg, #5e239d, #2e073f);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
 }
+.FOTO:hover {
+    transform: scale(1.02);
+}
+
+/* === Описание товара === */
 .Opisanie {
-    background-color: rgb(150, 150, 150);
-    padding-left: 10px;
-    width: 10%;
-    height: 20%;
+    background-color: #4b4b4b;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    margin-top: 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* === Корзина === */
 #cart {
     text-decoration: none;
     position: fixed;
     top: 20px;
     right: 0;
-    padding: 10px 20px 10px 40px;
+    padding: 12px 24px 12px 48px;
     border-radius: 32px 0 0 32px;
-    background-color: #999999;
-    box-shadow: 0 6px 6px #707070;
+    background-color: #6c5ce7;
+    box-shadow: 0 8px 20px rgba(108, 92, 231, 0.4);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1000;
+}
+#cart:hover {
+    background-color: #574b90;
+    transform: translateX(-5px);
 }
 #cart img {
-    height: 32px;
-    filter: brightness(0);
+    height: 28px;
+    filter: brightness(0) invert(1);
 }
 #cart span {
-    position: relative;
-    top: -5px;
-    left: -5px;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: bold;
 }
+
+/* === Слайдер товара === */
 .phone-card .slider-wrapper {
-    display: inline-block;
     position: relative;
-    width: 320px;
-    height: 320px;
+    width: 100%;
+    max-width: 340px;
+    height: 340px;
     overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
 }
 .phone-card .slider-wrapper img {
     position: absolute;
-    object-fit: contain;
     width: 100%;
     height: 100%;
-    opacity: 0%;
-    transition: opacity 0.6s;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
 }
 .phone-card .slider-wrapper img.visible {
-    opacity: 100%;
+    opacity: 1;
 }
 .phone-card .slider-wrapper img.arrow {
-    object-fit: scale-down;
-    object-position: center;
     position: absolute;
-    top: 50%;    
+    top: 50%;
     transform: translateY(-50%);
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #ccc;
     border-radius: 50%;
-    background-color: rgb(146, 154, 171);
-    opacity: 50%;
     cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    opacity: 0.5;
 }
 .phone-card .slider-wrapper img.arrow:hover {
-    opacity: 100%;
+    background-color: #e0e0e0;
+    transform: translateY(-50%) scale(1.1);
 }
 .phone-card .slider-wrapper img.arrow.forward {
-    right: 0;
+    right: 10px;
 }
 .phone-card .slider-wrapper img.arrow.back {
-    left: 0;
+    left: 10px;
 }
+
+/* === Логотип === */
 .logo {
-    width: 1%;
-    height: 1%;
+    width: 40px;
+    height: auto;
 }
+
+/* === Параграфы === */
 p {
-    color: rgb(63, 63, 63);
-    font-size: large;
-}   
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+/* === Адаптивность === */
+@media (max-width: 768px) {
+    .FOTO,
+    .slider-wrapper {
+        width: 90%;
+        height: auto;
+    }
+
+    #cart {
+        padding: 10px 20px 10px 20px;
+        font-size: 14px;
+    }
+
+    .Opisanie {
+        max-width: 90%;
+        margin: 20px auto;
+    }
+}
+body.dark-theme {
+    background-color: #1c1c1c;
+    color: #f1f1f1;
+}
+
+body.dark-theme header,
+body.dark-theme footer {
+    background-color: #2a2a2a;
+    box-shadow: none;
+}
+
+body.dark-theme .Opisanie,
+body.dark-theme .description {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-theme #cart {
+    background-color: #444;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-theme input,
+body.dark-theme button {
+    background-color: #2c2c2c;
+    color: #f1f1f1;
+    border: 1px solid #555;
+}
+
+body.dark-theme .slider-wrapper img.arrow {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+/* В тёмной теме — тёмная кнопка */
+body.dark-theme #theme-toggle {
+    background-color: rgba(40, 40, 40, 0.9);
+    color: white;
+}

@@ -62,7 +62,7 @@ function getProducts(data) {
 }
 function getProductCard(phoneName, phoneData) {
     const phoneCard = document.createElement('div')
-    phoneCard.className = "phone-card"
+    phoneCard.className = "phone-card" 
 
     //Название товара
     const cardTitle = document.createElement('h4')
@@ -281,3 +281,16 @@ function checkSearchInput(searchValue) {
         phone.style.display = phoneText.includes(searchText) ? 'block' : 'none';
     });
 }
+const themeToggle = document.getElementById('theme-toggle');
+
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+    themeToggle.textContent = '☀️';
+}
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    const isDark = document.body.classList.contains('dark-theme');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    themeToggle.textContent = isDark ? '☀️' : '🌙';
+});
