@@ -152,7 +152,7 @@ function showForwardImage(slider) {
 }
 function getDescriptionDiv(phoneData) {
     const desc = document.createElement('div');
-    desc.className = 'Opisanie'; // используй твой CSS класс Opisanie
+    desc.className = 'Opisanie';
 
     const brand = document.createElement('p');
     brand.innerText = 'Бренд: ' + phoneData.brand;
@@ -162,14 +162,18 @@ function getDescriptionDiv(phoneData) {
     model.innerText = 'Модель: ' + phoneData.model;
     desc.appendChild(model);
 
-    const os = document.createElement('p');
     if (phoneData.OS && phoneData.OS !== '-') {
+        const os = document.createElement('p');
         os.innerText = 'ОС: ' + phoneData.OS;
         desc.appendChild(os);
     }
 
     const ram = document.createElement('p');
-    ram.innerText = 'Оперативная память: ' + phoneData.RAM + ' ГБ';
+    if (phoneData.type === 'processor') {
+        ram.innerText = 'Оперативная память: ' + phoneData.RAM + ' МБ';
+    } else {
+        ram.innerText = 'Оперативная память: ' + phoneData.RAM + ' ГБ';
+    }
     desc.appendChild(ram);
 
     if (phoneData.ROM && phoneData.ROM > 0) {
@@ -196,15 +200,25 @@ function getDescriptionDiv(phoneData) {
         desc.appendChild(sim);
     }
 
-    // Дополнительно, можно отобразить "Тип устройства"
-    if (phoneData.camera === 0 && phoneData.battery === 0 && phoneData.screen.diagonal === 0) {
-        const type = document.createElement('p');
-        type.innerText = 'Тип: Видеокарта';
-        desc.prepend(type);
-    }
-
+    // Теперь выводим тип устройства более корректно
+    if (phoneData.type) {
+    const typeP = document.createElement('p');
+    const typeName = typeTranslations[phoneData.type.toLowerCase()] || phoneData.type;
+    typeP.innerText = 'Тип: ' + typeName;
+    desc.prepend(typeP);
+} else if (phoneData.camera === 0 && phoneData.battery === 0 && phoneData.screen.diagonal === 0) {
+    const typeP = document.createElement('p');
+    typeP.innerText = 'Тип: Видеокарта';
+    desc.prepend(typeP);
+}
     return desc;
 }
+const typeTranslations = {
+  processor: 'Процессор',
+  videocards: 'Видеокарта',
+  // добавь другие типы, если нужно
+};
+
 function updateLocalStorage() {
     const storageData = JSON.stringify(order)
     localStorage.setItem('order',storageData)

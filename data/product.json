@@ -241,5 +241,120 @@
       "rtx4090-3.webp"
     ],
     "simSlots": 0
+  },
+  "Процессор intel core i5-12400f": {
+    "type": "processor",
+    "brand":"Intel",
+    "model":"i5-12400f",
+    "OS":"-",
+    "screen": {
+      "diagonal": 0,
+      "type": "-",
+      "width": 0,
+      "height": 0,
+      "updateRate": 0
+    },
+    "RAM": 18,
+    "ROM": 0,
+    "camera": 0,
+    "battery": 0,
+    "images": [
+      "i5-12400f.jpg",
+      "i5-12400f1.webp",
+      "i5-12400f2.avif"
+    ],
+    "simSlots": 0
+  },  
+  "Процессор Intel Core i7-13700K": {
+    "type": "processor",
+    "brand": "Intel",
+    "model": "i7-13700K",
+    "OS": "-",
+    "screen": {
+      "diagonal": 0,
+      "type": "-",
+      "width": 0,
+      "height": 0,
+      "updateRate": 0
+    },
+    "RAM": 30,
+    "ROM": 0,
+    "camera": 0,
+    "battery": 0,
+    "images": [
+      "i7-13700k.webp",
+      "i7-13700k-1.webp",
+      "i7-13700k-2.webp"
+    ],
+    "simSlots": 0
+  },
+  "Процессор Intel Core i9-14900KF": {
+    "type": "processor",
+    "brand": "Intel",
+    "model": "i9-14900KF",
+    "OS": "-",
+    "screen": {
+      "diagonal": 0,
+      "type": "-",
+      "width": 0,
+      "height": 0,
+      "updateRate": 0
+    },
+    "RAM": 36,
+    "ROM": 0,
+    "camera": 0,
+    "battery": 0,
+    "images": [
+      "i9-14900kf.webp",
+      "i9-14900kf-1.webp",
+      "i9-14900kf-2.jpg"
+    ],
+    "simSlots": 0
+  },
+  "Процессор AMD Ryzen 7 7800X3D": {
+    "type": "processor",
+    "brand": "AMD",
+    "model": "Ryzen 7 7800X3D",
+    "OS": "-",
+    "screen": {
+      "diagonal": 0,
+      "type": "-",
+      "width": 0,
+      "height": 0,
+      "updateRate": 0
+    },
+    "RAM": 96,
+    "ROM": 0,
+    "camera": 0,
+    "battery": 0,
+    "images": [
+      "ryzen7800x3d.webp",
+      "ryzen7800x3d-1.webp",
+      "ryzen7800x3d-2.webp"
+    ],
+    "simSlots": 0
+  },
+  "Процессор AMD Ryzen 9 7950X": {
+    "type": "processor",
+    "brand": "AMD",
+    "model": "Ryzen 9 7950X",
+    "OS": "-",
+    "screen": {
+      "diagonal": 0,
+      "type": "-",
+      "width": 0,
+      "height": 0,
+      "updateRate": 0
+    },
+    "RAM": 64,
+    "ROM": 0,
+    "camera": 0,
+    "battery": 0,
+    "images": [
+      "ryzen7950x.webp",
+      "ryzen7950x-1.jpg",
+      "ryzen7950x-2.jpg"
+    ],
+    "simSlots": 0
   }
 }
