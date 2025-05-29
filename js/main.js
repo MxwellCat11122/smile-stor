@@ -1,6 +1,6 @@
 'use strict'
 
-const catalog = document.getElementById("catalog")
+const catalog = document.getElementById("product-grid")
 
 const isCart = window.location.pathname.endsWith('cart.html')
 

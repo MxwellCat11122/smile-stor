@@ -474,5 +474,46 @@ body.dark-theme .site-header {
 .logo:hover {
     transform: scale(1.2);
 }
+.catalog .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* выравнивание по центру */
+}
 
+/* Сетка товаров — 3 в ряд на ПК */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    justify-items: center;
+    padding: 20px 0;
+}
+
+@media (min-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Убедимся, что каждая карточка не растягивается слишком сильно */
+.phone-card {
+    width: 100%;
+    max-width: 360px;
+    padding: 16px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.phone-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 
